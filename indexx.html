@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yüce Galeri</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Yüce Galeri</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">Hakkımızda</a>
+      <a href="#inventory" class="w3-bar-item w3-button">Araçlar</a>
+      <a href="#contact" class="w3-bar-item w3-button">İletişim</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="car-header.jpg" alt="Yüce Galeri" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Yüce Galeri</h1>
+    <h3>Hayalinizdeki Araç Burada</h3>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <img src="./image/galeri.webp" class="w3-round w3-image" alt="Galeri" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large"style="">
+      <h1 class ="w3-center">Hakkımızda</h1><br>
+      <p class="w3-large">Yüce Galeri, kaliteli ve güvenilir araç satışında uzmanlaşmış bir firmadır. 20 yılı aşkın tecrübemizle, müşterilerimize en iyi hizmeti sunmayı taahhüt ediyoruz. Otomobil tutkunları için özenle seçilmiş, her bütçeye uygun geniş bir araç yelpazemiz mevcuttur.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Inventory Section -->
+<div class="w3-container w3-padding-64" id="inventory">
+  <h1 class="w3-center">Araçlarımız</h1><br>
+
+  <!-- Araç 1 -->
+  <div class="w3-row w3-padding-32">
+    <div class="w3-col l6 w3-padding-large">
+      <img src="./image/bmw-x5.jpg" class="w3-round w3-image" alt="2022 BMW X5" style="width:100%">
+    </div>
+    <div class="w3-col l6 w3-padding-large">
+      <h4>2022 BMW X5</h4>
+      <p class="w3-text-grey">Lüks SUV, düşük kilometre, tam donanım. Fiyat: 2.000.000 TL</p>
+    </div>
+  </div>
+
+  <!-- Araç 2 -->
+  <div class="w3-row w3-padding-32">
+    <div class="w3-col l6 w3-padding-large w3-hide-small">
+      <h4>2021 Mercedes-Benz C-Class</h4>
+      <p class="w3-text-grey">Şehir içi ve uzun yol için mükemmel konfor. Fiyat: 1.500.000 TL</p>
+    </div>
+    <div class="w3-col l6 w3-padding-large">
+      <img src="./image/mercedes-c-class_0.webp" class="w3-round w3-image" alt="2021 Mercedes-Benz C-Class" style="width:100%">
+    </div>
+  </div>
+
+  <!-- Araç 3 -->
+  <div class="w3-row w3-padding-32">
+    <div class="w3-col l6 w3-padding-large">
+      <img src="./image/toyota-corolla.webp" class="w3-round w3-image" alt="2023 Toyota Corolla" style="width:100%">
+    </div>
+    <div class="w3-col l6 w3-padding-large">
+      <h4>2023 Toyota Corolla</h4>
+      <p class="w3-text-grey">Ekonomik ve dayanıklı. Fiyat: 900.000 TL</p>
+    </div>
+  </div>
+
+  <!-- Araç 4 -->
+  <div class="w3-row w3-padding-32">
+    <div class="w3-col l6 w3-padding-large w3-hide-small">
+      <h4>2022 Audi A3</h4>
+      <p class="w3-text-grey">Modern tasarım ve yüksek performans. Fiyat: 1.200.000 TL</p>
+    </div>
+    <div class="w3-col l6 w3-padding-large">
+      <img src="./image/Audi-A3-Sedan.jpg" class="w3-round w3-image" alt="2022 Audi A3" style="width:100%">
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>İletişim</h1><br>
+    <p>Hayalinizdeki aracı bulmanıza yardımcı olmak için buradayız. İletişim bilgilerimizden bize ulaşabilirsiniz.</p>
+    <p class="w3-text-blue-grey w3-large"><b>Yüce Galeri, 1234 Araç Sokak, İstanbul</b></p>
+    <p>Telefon: 0212 123 45 67 | Email: info@yucegaleri.com</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Adınız" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="İlgilendiğiniz Araç" required name="Car"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Mesajınız" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">Mesaj Gönder</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
