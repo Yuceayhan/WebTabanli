@@ -35,16 +35,6 @@
             transform: scale(1.05); /* Resmi büyüt */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gölgelendirme efekti */
         }
-
-        /* Navbar kaybolma ve görünme efekti */
-        .hidden {
-            display: none;
-        }
-
-        /* Navbar'ın kaybolduğu yerin üst kısmında küçük bir boşluk bırakmak için */
-        .w3-top {
-            z-index: 10;
-        }
     </style>
 </head>
 <body>
@@ -61,7 +51,7 @@
 </div>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top" id="navbar">
+<div class="w3-top">
     <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
         <img src="image/logo.webp" alt="Logo" style="height:60px; width: 70px;">
         <div class="w3-right w3-hide-small">
@@ -165,7 +155,6 @@
 </div>
 
 <script>
-// Resmi slider işlevi
 let slideIndex = 0;
 showSlides();
 
@@ -184,18 +173,6 @@ function showSlides() {
   if (slideIndex < 1) { slideIndex = slides.length }
   slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 5000); // Her 5 saniyede bir geçiş
-}
-
-// Navbar kaybolma ve görünme işlevi
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0"; // Navbar'ı göster
-  } else {
-    document.getElementById("navbar").style.top = "-50px"; // Navbar'ı gizle
-  }
-  prevScrollpos = currentScrollPos;
 }
 </script>
 
