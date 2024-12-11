@@ -8,15 +8,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-body {font-family: "Times New Roman", Georgia, Serif;}
+body {font-family: "Times New Roman", Georgia, Serif;background-color: #eae7dc; /* Sıcak ve hoş bir krem tonu */
+color: #333; /* Metinlerin daha belirgin olması için koyu bir ton */}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display";
   letter-spacing: 5px;
+}
+#about {
+  background-color: #f9f5e8; /* Hafif açık krem */
+}
+
+#inventory {
+  background-color: #fffaf0; /* Açık fildişi tonu */
+}
+
+#contact {
+  background-color: #f7f1e3; /* Çok açık şeftali tonu */
 }
 </style>
 
 </head>
 <body>
+  <!-- Slider -->
+<div class="w3-content w3-display-container" style="max-width:1600px; position:relative; z-index:1;">
+  
+  <img class="mySlides w3-animate-opacity" src="image/mercedes-c-class_0.webp" style="width:100%" alt="Mercedes C-Class">
+  <img class="mySlides w3-animate-opacity" src="image/toyota-corolla.webp" style="width:100%" alt="Toyota Corolla">
+  <img class="mySlides w3-animate-opacity" src="image/Audi-A3-Sedan.jpg" style="width:100%" alt="Audi A3">
+
+  <!-- Önceki ve Sonraki Düğmeler -->
+  <button class="w3-button w3-black w3-display-left" onclick="plusSlides(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusSlides(1)">&#10095;</button>
+</div>
+
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -28,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
       <div class="w3-right w3-hide-small">
         <a href="#about" class="w3-bar-item w3-button" style="font-size:large">Hakkımızda</a>
         <a href="#inventory" class="w3-bar-item w3-button"style="font-size:large">Araçlar</a>
-        <a href="#contact" class="w3-bar-item w3-button">İletişim</a>
+        <a href="#contact" class="w3-bar-item w3-button" style="font-size:large" >İletişim</a>
       </div>
     </div>
   </div>
@@ -36,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="car-header.jpg" alt="Yüce Galeri" width="1600" height="800">
+  
   <div class="w3-display-bottomleft w3-padding-large w3-opacity">
     <h1 class="w3-xxlarge">Yüce Galeri</h1>
     <h3>Hayalinizdeki Araç Burada</h3>
@@ -52,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
       <img src="./image/galeri.webp" class="w3-round w3-image" alt="Galeri" width="600" height="750">
     </div>
 
-    <div class="w3-col m6 w3-padding-large"  style="border: 1px solid black;">
+    <div class="w3-col m6 w3-padding-large">
       <h1 class ="w3-center">Hakkımızda</h1><br>
       <p class="w3-large">Yüce Galeri, kaliteli ve güvenilir araç satışında uzmanlaşmış bir firmadır. 20 yılı aşkın tecrübemizle, müşterilerimize en iyi hizmeti sunmayı taahhüt ediyoruz. Otomobil tutkunları için özenle seçilmiş, her bütçeye uygun geniş bir araç yelpazemiz mevcuttur.</p>
     </div>
@@ -128,10 +152,31 @@ h1, h2, h3, h4, h5, h6 {
   
 <!-- End page content -->
 </div>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function plusSlides(n) {
+  slideIndex += n;
+  showSlides();
+}
+
+function showSlides() {
+  const slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  if (slideIndex < 1) { slideIndex = slides.length }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 5000); // Her 5 saniyede bir geçiş
+}
+</script>
 
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Powered by AYHAN YÜCE</p>
 </footer>
 
 </body>
